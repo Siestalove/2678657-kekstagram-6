@@ -3,7 +3,7 @@ function checkLength(str, strlength) {
 }
 
 
-function checkPalindrom(str) {
+function checkPalindrome(str) {
   const strMass = str.toLowerCase().replaceAll(' ','').split('');
   const reverseStr = strMass.toReversed();
   return strMass.join('') === reverseStr.join('');
@@ -37,7 +37,7 @@ function extractNumberNew(str) {
 
 
 checkLength('2222', 5);
-checkPalindrom('Лёша на полке клопа нашёл ');
+checkPalindrome('Лёша на полке клопа нашёл ');
 extractNumber('0000fjdnfjndf2323');
 extractNumberNew('fjndsfjsjdfnjnsfd342424');
 
