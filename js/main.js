@@ -1,6 +1,10 @@
 const massMessages = [
   'Всё отлично!',
-  'В целом всё неплохо. Но не всё.'
+  'В целом всё неплохо. Но не всё.',
+  'Когда вы делаете фотографию, хорошо бы убирать палец из кадра. В конце концов это просто непрофессионально.',
+  'Моя бабушка случайно чихнула с фотоаппаратом в руках и у неё получилась фотография лучше.',
+  'Я поскользнулся на банановой кожуре и уронил фотоаппарат на кота и у меня получилась фотография лучше.',
+  'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
 ];
 
 const massNames = [
@@ -25,20 +29,40 @@ function generateUniqId() {
   }
 }
 
+function generateMessage() {
+  let message = '';
+  const countMessage = Math.floor(Math.random() * 2) + 1;
+  const usedIndexes = [];
+
+  for(let i = 0; i < countMessage; i++) {
+    let randomIndex;
+    do
+    {
+      randomIndex = Math.floor(Math.random() * massMessages.length);
+    }
+    while (usedIndexes.includes(randomIndex));
+
+    usedIndexes.push(randomIndex);
+    message += `${massMessages[randomIndex]  } `;
+  }
+
+  return message;
+}
+
+
 function generateComments(count) {
   const massiveCommentsObj = [];
   for(let i = 0 ; i<count; i++){
     const commentObj = {
       id: generateUniqId(),
       avatar: `img/avatar-${Math.floor(Math.random() * (6 - 1 + 1)) + 1}.svg`,
-      message: massMessages[Math.floor(Math.random() * massMessages.length)],
+      message: generateMessage(),
       name: massNames[Math.floor(Math.random() * massNames.length)],
     };
     massiveCommentsObj.push(commentObj);
   }
   return massiveCommentsObj;
 }
-
 
 function generateObjects() {
   const massiveObject = [];
