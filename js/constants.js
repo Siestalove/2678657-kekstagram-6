@@ -19,6 +19,8 @@ const MASS_NAMES = [
 
 const massUniqId = [];
 
+const counter = 0;
+
 const COUNT_POSTS = 25;
 const MAX_COUNT_MESSAGES = 30;
 const MIN_LIKES = 15;
@@ -36,4 +38,5 @@ export{
   MAX_LIKES,
   MIN_AVATAR_NUM,
   MAX_AVATAR_NUM,
+  counter,
 };
