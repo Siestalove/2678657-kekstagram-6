@@ -10,6 +10,7 @@ const commentsLoader = bigPicture.querySelector('.comments-loader');
 
 const cancelButton = bigPicture.querySelector('.big-picture__cancel');
 
+
 const createComment = (comment) => {
   const commentElement = document.createElement('li');
   commentElement.classList.add('social__comment');
