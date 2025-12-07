@@ -7,17 +7,17 @@ const fragment = document.createDocumentFragment();
 
 const createMiniature = function (post) {
 
-  const MiniatureElement = miniatureTemplate.cloneNode(true);
-  const MiniatureImg = MiniatureElement.querySelector('.picture__img');
-  const MiniatureLikes = MiniatureElement.querySelector('.picture__likes');
-  const MiniatureComments = MiniatureElement.querySelector('.picture__comments');
+  const miniatureElement = miniatureTemplate.cloneNode(true);
+  const miniatureImg = miniatureElement.querySelector('.picture__img');
+  const miniatureLikes = miniatureElement.querySelector('.picture__likes');
+  const miniatureComments = miniatureElement.querySelector('.picture__comments');
 
-  MiniatureImg.src = post.url;
-  MiniatureImg.alt = post.description;
-  MiniatureLikes.textContent = post.likes;
-  MiniatureComments.textContent = post.comments.length;
+  miniatureImg.src = post.url;
+  miniatureImg.alt = post.description;
+  miniatureLikes.textContent = post.likes;
+  miniatureComments.textContent = post.comments.length;
 
-  return MiniatureElement;
+  return miniatureElement;
 };
 
 const renderMiniature = function (posts) {
