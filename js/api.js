@@ -19,7 +19,7 @@ const loadData = (onSuccess, onError) => {
       loadingMessage.remove();
     });
 };
-const createSender = (formData, onSuccess, submitButton) => {
+const postSender = (formData, onSuccess, submitButton) => {
   submitButton.disabled = true;
 
   const loadingMessage = showLoadingMessage();
@@ -48,4 +48,4 @@ const createSender = (formData, onSuccess, submitButton) => {
     });
 };
 
-export { loadData, createSender };
+export { loadData, postSender };

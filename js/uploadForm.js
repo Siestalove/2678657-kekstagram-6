@@ -1,5 +1,5 @@
 import { initValidation } from './validate.js';
-import { createSender } from './api.js';
+import { postSender } from './api.js';
 import { isAnyMessageOpen } from './messages.js';
 
 const uploadForm = document.querySelector('.img-upload__form');
@@ -90,7 +90,7 @@ uploadForm.addEventListener('submit', (evt) => {
 
   const formData = new FormData(uploadForm);
 
-  createSender(
+  postSender(
     formData,
     () => {
       hideEditForm();
