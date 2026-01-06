@@ -41,6 +41,8 @@ const FILE_TYPES = ['jpg', 'jpeg', 'png'];
 
 const DEFAULT_UPLOAD_IMAGE = 'img/upload-default-image.jpg';
 
+const MAX_RANDOM_POST_COUNT = 10;
+
 const TIMEOUT_DELAY = 500;
 
 export{
@@ -61,5 +63,6 @@ export{
   SERVER_URL,
   FILE_TYPES,
   DEFAULT_UPLOAD_IMAGE,
+  MAX_RANDOM_POST_COUNT,
   TIMEOUT_DELAY,
 };
