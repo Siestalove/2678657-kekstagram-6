@@ -41,6 +41,8 @@ const FILE_TYPES = ['jpg', 'jpeg', 'png'];
 
 const DEFAULT_UPLOAD_IMAGE = 'img/upload-default-image.jpg';
 
+const TIMEOUT_DELAY = 500;
+
 export{
   MASS_MESSAGES,
   MASS_NAMES,
@@ -59,4 +61,5 @@ export{
   SERVER_URL,
   FILE_TYPES,
   DEFAULT_UPLOAD_IMAGE,
+  TIMEOUT_DELAY,
 };
