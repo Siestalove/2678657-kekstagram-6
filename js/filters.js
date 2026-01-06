@@ -15,8 +15,8 @@ const comparePostsWithComments = (postA, postB) => {
   return countB - countA;
 };
 
-const getRandomPosts = (possts, count) => {
-  const filteredPosts = [...possts].sort(() => Math.random() - 0.5);
+const getRandomPosts = (postsArray, count) => {
+  const filteredPosts = [...postsArray].sort(() => Math.random() - 0.5);
 
   return filteredPosts.slice(0, count);
 };
