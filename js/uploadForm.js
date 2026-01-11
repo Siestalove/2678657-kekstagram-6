@@ -118,13 +118,7 @@ const updatePhotos = () => {
     return;
   }
 
-  const isValidType = FILE_TYPES.some((type) => {
-    if (type.includes('/')) {
-      return file.type === type;
-    } else {
-      return file.name.toLowerCase().endsWith(type);
-    }
-  });
+  const isValidType = FILE_TYPES.some((type) => type.includes('/') && file.type === type);
 
   if (!isValidType) {
     showFileTypeErrorMessage();
